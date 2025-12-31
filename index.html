@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== Sidebar ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>AEN Portal</h2>
+      <button id="toggleSidebar" class="hamburger">☰</button>
+    </div>
+
+    <ul class="menu">
+      <li><a href="#">Dashboard</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Projects ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Direct</a></li>
+          <li><a href="#">Indirect</a></li>
+          <li><a href="#">Audit</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </aside>
+
+  <!-- ===== Main Layout ===== -->
+  <div class="main">
+    <!-- ===== Header ===== -->
+    <header class="header">
+      <h1>Admin Dashboard</h1>
+    </header>
+
+    <!-- ===== Search & Filters ===== -->
+    <section class="search-section">
+      <input type="text" placeholder="Search..." class="search-input" />
+      <select><option>Type</option><option>Project</option><option>Audit</option></select>
+      <select><option>Status</option><option>Active</option><option>Pending</option></select>
+      <select><option>Team</option><option>Engineering</option><option>QA</option></select>
+      <select><option>Date</option><option>Newest</option><option>Oldest</option></select>
+      <select><option>Priority</option><option>High</option><option>Low</option></select>
+    </section>
+
+    <!-- ===== Main Content ===== -->
+    <section class="content">
+      <div class="card">Main Content 1</div>
+      <div class="card">Main Content 2</div>
+      <div class="card">Main Content 3</div>
+      <div class="card">Main Content 4</div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <p>© 2025 Advanced Engineering (AEN) — All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
