@@ -1,0 +1,105 @@
+.sidebar {
+transition: width 0.3s ease, min-width 0.3s ease;
+}
+
+.sidebar.collapsed {
+width: 60px;
+min-width: 60px;
+}
+
+.sidebar.collapsed .sidebar-logo img {
+width: 40px;
+}
+
+.sidebar.collapsed .sidebar-add-project {
+flex-direction: column;
+gap: 5px;
+padding: 10px 5px;
+}
+
+.sidebar.collapsed .sidebar-add-project button {
+width: 40px;
+height: 40px;
+font-size: 18px;
+}
+
+.sidebar.collapsed .dropbtn span:not(.caret) {
+display: none;
+}
+
+.sidebar.collapsed .dropbtn {
+justify-content: center;
+padding: 12px 5px;
+}
+
+.sidebar.collapsed .caret {
+margin: 0;
+}
+
+.sidebar.collapsed .dropdown-content {
+position: absolute;
+left: 60px;
+top: 0;
+min-width: 200px;
+z-index: 1000;
+}
+
+.sidebar.collapsed .admin-login-btn {
+font-size: 0;
+padding: 12px 5px;
+}
+
+.sidebar.collapsed .admin-login-btn::before {
+content: "👤";
+font-size: 20px;
+}
+
+.sidebar-toggle {
+position: absolute;
+top: 15px;
+right: -15px;
+width: 30px;
+height: 30px;
+background: #640e8b;
+border: none;
+border-radius: 50%;
+color: white;
+font-size: 18px;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+z-index: 100;
+transition: transform 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+background: #7a10a8;
+transform: scale(1.1);
+}
+
+.sidebar {
+position: relative;
+}
+
+/* <button class="sidebar-toggle" id="sidebarToggle" title="Toggle Sidebar">◀</button>
+
+  // Sidebar Toggle Functionality JS
+  const sidebar = document.querySelector('.sidebar');
+  const sidebarToggle = document.getElementById('sidebarToggle');
+  
+  sidebarToggle.addEventListener('click', function() {
+    sidebar.classList.toggle('collapsed');
+    
+    // Change toggle button icon
+    if (sidebar.classList.contains('collapsed')) {
+      sidebarToggle.innerHTML = '▶';
+      sidebarToggle.style.right = '-15px';
+    } else {
+      sidebarToggle.innerHTML = '◀';
+      sidebarToggle.style.right = '-15px';
+    }
+  });
+  
+*/

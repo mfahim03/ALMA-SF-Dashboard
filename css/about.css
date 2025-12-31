@@ -1,0 +1,335 @@
+/* Custom styles for about page */
+.about-section {
+    width: 100vw;
+    margin-left: calc(-1 * (100vw - 100%)/2);
+    background: url('../img/tech.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 0; /* remove top/bottom padding */
+    color: white;
+    position: relative;
+    box-sizing: border-box;
+    height: 400px; /* set a height or min-height to define area */
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Position the text container absolute bottom left */
+.about-text-container {
+    position: absolute;
+    top: 50%;              /* center vertically */
+    left: 40px;            /* stay aligned to the left */
+    transform: translateY(-50%); /* adjust for own height */
+    z-index: 2;
+    max-width: 800px;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: left;
+    padding: 0;
+}
+
+.about-text-container p {
+    font-size: medium;
+    margin: 0;
+}
+
+.about-text-container h1 {
+    font-size: x-large;
+    margin: 0 0 10px 0;
+}
+
+/* TEAM CONTAINER */
+.team-container {
+    background: linear-gradient(
+    to top, 
+    rgba(44, 62, 80, 0.7), 
+    rgba(55, 7, 77, 0.7)
+    );
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin:0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.team-container h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: x-large;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.team-card {
+    background:linear-gradient(
+    to top, 
+    rgba(180, 180, 180, 0.5), 
+    rgba(255, 255, 255, 0.5)
+  );
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.team-card-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+    z-index: 10;
+}
+
+.team-card-actions .btn-action {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.team-photo-container {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-info {
+    text-align: center;
+}
+
+.team-info h3 {
+    color: #ffffff;
+    margin: 10px 0 5px 0;
+    font-size: 20px;
+}
+
+.team-position {
+    color: #2c3e50;
+    font-weight: bold;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.team-desc {
+    color: #000000;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.btn-action {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+}
+
+.btn-edit { 
+    background-color: #4CAF50; 
+    color: white; 
+}
+.btn-edit:hover { 
+    background-color: #45a049; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-delete { 
+    background-color: #f44336; 
+    color: white; 
+}
+.btn-delete:hover { 
+    background-color: #da190b; 
+}
+
+.btn-add { 
+    background-color: #2c3e50; 
+    color: white; 
+}
+.btn-add:hover { 
+    background-color: #0b7dda; 
+}
+
+.btn-save { 
+    background-color: #4CAF50; 
+    color: white; 
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+}
+.btn-save:hover { 
+    background-color: #45a049; 
+}
+
+.btn-cancel { 
+    background-color: #888; 
+    color: white; 
+    width: 100%;
+    padding: 12px;
+}
+.btn-cancel:hover { 
+    background-color: #666; 
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex !important;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-header {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    color: #999;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="file"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2196F3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: Arial, sans-serif;
+}
+
+/* Message Styles */
+.message {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+    animation: slideIn 0.3s ease;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-group button {
+    flex: 1;
+}

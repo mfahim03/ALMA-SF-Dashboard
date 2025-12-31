@@ -1,0 +1,166 @@
+/* ===== SEARCH ===== */
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 0 10px;
+}
+    
+#projectSearch {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#projectSearch:focus {
+  border-color: #979797;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  right: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  max-height: 400px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1000;
+  margin-top: 5px;
+}
+
+.search-results.active {
+  display: block;
+}
+
+.search-result-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: background-color 0.2s;
+}
+
+.search-result-item:hover {
+  background-color: #f5f5f5;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.search-result-info {
+  flex: 1;
+}
+
+.search-result-name {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.search-result-type {
+  font-size: 12px;
+  color: #666;
+}
+
+.search-result-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.search-result-status.active {
+  background-color: green;
+}
+
+.search-result-status.inactive {
+  background-color: orange;
+}
+
+.no-results {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.project-card {
+  position: relative;
+}
+.project-edit-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #2c3e50;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 1;
+  transition: background 0.3s ease;
+  z-index: 10;
+  font-size: 18px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.project-edit-icon:hover {
+  background: #7a10a8;
+  color: white;
+}
+
+/* ===== FILTER BUTTONS ===== */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px auto 25px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: linear-gradient(135deg, #2c3e50 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #2c3e50, #2e7d32);
+  box-shadow: 0 4px 10px rgba(39, 51, 77, 0.3);
+}
+
+/* ===COLOR PALETTE=== 
+purple #7a10a8 ,
+blue #2c3e50 
+*/
